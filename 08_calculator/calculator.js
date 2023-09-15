@@ -7,31 +7,19 @@ const subtract = function(a, b) {
 };
 
 const sum = function(numbers) {
-  let sum = 0;
-	numbers.forEach( num => {
-    sum += num;
-  })
-  return sum;
+  return numbers.reduce((total, current) => total + current, 0);
 };
 
 const multiply = function(numbers) {
-  let product = 1;
-  numbers.forEach( num => {
-    product *= num;
-  })
-  return product;
+  return numbers.reduce((product, current) => product * current)
 };
 
 const power = function(a, b) {
   return a ** b;
 };
 
-const factorial = function(num) {
-  let factorial = 1;
-	for (i = 1; i <= num; i++) {
-    factorial *= i;
-  }
-  return factorial;
+const factorial = function fac(num) {
+  return num < 2 ? 1 : num * fac(num - 1);
 };
 
 // Do not edit below this line
